@@ -16,12 +16,12 @@ struct ContentView: View {
             Text("RECREATION")
                 .font(.largeTitle)
                 .fontWeight(.heavy)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.black)
 
                 .padding()
                 
             NavigationLink(destination: memoryScreen()) {
-                            Text("Tic Tac Toe")
+                            Text("Calmtento")
                                 .font(.title)
                                 .foregroundColor(Color.white)
                                 

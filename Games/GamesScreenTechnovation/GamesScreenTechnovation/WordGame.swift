@@ -64,16 +64,19 @@ struct WordGame: View {
                 
                 guard isOriginal(word: answer) else {
                     wordError(title: "Word is used already", message: "Be more Original! :) ")
+                        self.points -= 1
                     return
                 }
                 
                 guard isPossible(word:answer) else {
                     wordError(title: "Word is not possible!", message: "Hehe you can't make up words silly!")
+                        self.points -= 1
                     return
                 }
                 
                 guard isReal(word: answer) else {
                     wordError(title: "Word is not real!", message: "That isn't a real word!")
+                        self.points -= 1
                     return
                 }
                 

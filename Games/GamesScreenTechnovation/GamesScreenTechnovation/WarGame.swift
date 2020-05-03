@@ -16,7 +16,6 @@ struct WarGame: View {
     @State private var score2 = 0
     var body: some View {
          ZStack{
-                    Image("Background").resizable() //changebackgroundcolor
                     
                     VStack{
                          
@@ -32,10 +31,16 @@ struct WarGame: View {
                             HStack{
                                 Image("card" + String(randNum1))
                                     .frame(width: nil)
-                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/4/*@END_MENU_TOKEN@*/)
+                                    .border(Color.orange.opacity(0.6), width: 3).cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.orange.opacity(0.6), lineWidth: 4))
+                                    .shadow(radius: 10)
                                 
                                 Image("card" + String(randNum2))
-                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/4/*@END_MENU_TOKEN@*/)
+                                    .border(Color.orange.opacity(0.6), width: 3).cornerRadius(10)
+                                    .overlay(RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.orange.opacity(0.6), lineWidth: 4))
+                                    .shadow(radius: 10)
                         
                             }
                             
@@ -66,6 +71,9 @@ struct WarGame: View {
                             
                                 .background(Color.orange.opacity(0.6))
                             .cornerRadius(20)
+                        
+                            
+                            .shadow(radius: 20)
                             //Image("dealbutton").renderingMode(.original) //Remove later and make it aesthetic
                         }
                         
@@ -83,11 +91,11 @@ struct WarGame: View {
                                     Text(String(score1))
                                         .font(.headline)
                                     
-                                }.background(Color.orange.opacity(0.6).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).frame(width: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)).frame(width: 150.0, height: 100.0).padding(.leading, 75)
+                                }.background(Color.white.opacity(0.6).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).frame(width: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)).frame(width: 150.0, height: 100.0).padding(.leading, 75)
                                     .frame(width: 90.0)
                 
                                 
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.black)
                                     
                                 
                                 
@@ -103,9 +111,9 @@ struct WarGame: View {
                                         .font(.headline)
                                     
                                     
-                                }.background(Color.orange.opacity(0.6).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).frame(width: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)).frame(width: 150.0, height: 80.0)
+                                }.background(Color.white.opacity(0.6).cornerRadius(/*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/).frame(width: /*@START_MENU_TOKEN@*/150.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)).frame(width: 150.0, height: 80.0)
                                 .padding(.trailing, 10)
-                                .foregroundColor(.white)
+                                .foregroundColor(.black)
                                 
                     }
                             
