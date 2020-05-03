@@ -1,2 +1,2 @@
 # Contento-Technovation
-Girls Technovation Challenge 2020
+This is our project for the Girls Technovation Challenge 2020
